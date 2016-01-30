@@ -26,6 +26,11 @@ angular.module('cycle', ['ui.router', 'firebase', 'ngAnimate', 'ui.bootstrap', '
             templateUrl: "partials/shelter.html",
             controller: 'shelterCtrl'
         })
+        .state('map', {
+            url: "/map",
+            templateUrl: "partials/map.html",
+            controller: 'mapCtrl'
+        })
         
     $urlRouterProvider.otherwise("/");
 
@@ -293,6 +298,10 @@ angular.module('cycle', ['ui.router', 'firebase', 'ngAnimate', 'ui.bootstrap', '
 //This is the controller that controls the search page.  It pulls data from our firebase
 //database and allows filtering. 
 .controller('searchCtrl', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
+    var ref = new Firebase("https://winfohackathon.firebaseio.com/classes/");
+    $scope.classList = $firebaseArray(ref);
+}])
+.controller('mapCtrl', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
     var ref = new Firebase("https://winfohackathon.firebaseio.com/classes/");
     $scope.classList = $firebaseArray(ref);
 }])

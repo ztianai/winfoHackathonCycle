@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('rateMyClass', ['ui.router', 'firebase', 'ngAnimate', 'ui.bootstrap', 'ngSanitize', 'leaflet-directive'])
+angular.module('cycle', ['ui.router', 'firebase', 'ngAnimate', 'ui.bootstrap', 'ngSanitize', 'leaflet-directive'])
 
 //Provides functionality for ui-router and different states. 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -57,41 +57,45 @@ angular.module('rateMyClass', ['ui.router', 'firebase', 'ngAnimate', 'ui.bootstr
 
 //This is the add class controller.  It allows you to add a class for other users to see and review. 
 .controller('addclassCtrl', ['$http', '$scope', '$firebaseArray', '$location', function($http, $scope, $firebaseArray, $location) {
-    $scope.selected = undefined;
-
-    $scope.isSelected = function(font) {
-        return $scope.selected === font;
-    }
-    $scope.setMaster = function(font) {
-        $scope.selected = font;
-    }
-
-    $http.get("../src/font-awesome.json").then(function(response) {
-        $scope.fonts = response.data;
-    });
 
 
+    var ref = new Firebase("https://winfohackathon.firebaseio.com/");
+    var shelters = ref.child('shelters');
+    $scope.shelterList = $firebaseArray(shelters);
 
-    $http.get("../src/collegeData.json").then(function(response) {
-        $scope.colleges = response.data;
-    });
+    $scope.cups = ['Low (1-100)', 'Medium (100-300)', 'High (300+)'];
+    $scope.cup = '';
+    $scope.tampons = ['Low (1-100)', 'Medium (100-300)', 'High (300+)'];
+    $scope.tampon = '';
+    $scope.pads = ['Low (1-100)', 'Medium (100-300)', 'High (300+)'];
+    $scope.pad = '';
+    $scope.liners = ['Low (1-100)', 'Medium (100-300)', 'High (300+)'];
+    $scope.liner = '';
 
-    var ref = new Firebase("https://ratemyclasstianai.firebaseio.com");
-    var classes = ref.child('classes');
-    $scope.classList = $firebaseArray(classes);
 
 
-    $scope.addClass = function() {
-        var className = $scope.addClassForm.className;
-        console.log($scope.addClassForm.desc);
-        $scope.classList.$add({
-            icon: "fa " + $scope.selected,
+
+
+
+
+    $scope.addShelter = function() {
+        var className = $scope.addShelterForm.shelterName;
+        console.log($scope.addShelterForm.desc);
+        $scope.shelterList.$add({
             name: className,
-            institution: $scope.selectedSchool,
             timestamp: Firebase.ServerValue.TIMESTAMP,
-            desc: $scope.addClassForm.desc
+            desc: $scope.addShelterForm.desc,
+            address: $scope.addShelterForm.address,
+            zip: $scope.addShelterForm.shelterZip,
+            phone: $scope.addShelterForm.shelterNum,
+            pad: $scope.pad,
+            tampon: $scope.tampon,
+            cup: $scope.cup,
+            liner: $scope.liner
+
+
         }).then(function() {
-            $scope.addClassForm.className = "";
+            $scope.addShelterForm.className = "";
             $location.path('/');
         })
     }

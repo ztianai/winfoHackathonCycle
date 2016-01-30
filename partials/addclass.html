@@ -1,10 +1,71 @@
     <div id="partialHead">
-        <h1>Add Class</h1>
+        <h1>Add Shelter</h1>
     </div>
 
 
-    <form name="addClassForm" novalidate id="addClassForm">
+    <form name="addShelterForm" novalidate id="addShelterForm">
 
-        
+        <!-- Bind model "handle" to this input and make the help-block show up if too short -->
+        <div class="form-group container-fluid typeahead-demo">
+
+            <label for="shelterName">Shelter Name:</label>
+            <input id="shelterName" class="form-control" ng-minlength="3" required ng-model="addShelterForm.shelterName">
+
+
+            <label for="shelterDescr">Shelter Description:</label>
+            <input id="shelterDescr" class="form-control" required ng-model="addShelterForm.desc" name="shelterDescr"
+                   ng-minlength="50">
+
+            <p class="help-block" ng-show="addShelterForm.shelterDescr.$error.minlength">Minimum length of 50 characters!</p>
+            
+
+            <label for="shelterAddress">Shelter Address:</label>
+            <input id="shelterAddress" class="form-control" required ng-model="addShelterForm.address" name="shelterAddress"
+                   ng-minlength="50">
+
+            <p class="help-block" ng-show="addShelterForm.shelterAddress.$error.minlength">Minimum length of 50 characters!</p>
+
+
+
+            <label for="shelterZip">Shelter Zip Code:</label>
+            <input id="shelterZip" class="form-control" ng-minlength="5" required ng-model="addShelterForm.shelterZip">
+
+
+            <label for="shelterNum">Shelter Phone Number:</label>
+            <input id="shelterNum" class="form-control" ng-minlength="10" required ng-model="addShelterForm.shelterNum">
+
+
+
+            <div class="row">
+            <div class="col-lg-3">
+                <label for="pad">Pad Inventory: </label>
+                <select name="pad" ng-model="pad" ng-options="score for score in pads"
+                        class="form-control" required></select>
+            </div>
+            <div class="col-lg-3">
+                <label for="tampon">Tampon Inventory: </label>
+                <select name="tampon" ng-model="tampon" ng-options="score for score in tampons"
+                        class="form-control" required></select>
+            </div>
+            <div class="col-lg-3">
+                <label for="cup">Cup Inventory: </label>
+                <select name="cup" ng-model="cup" ng-options="score for score in cups"
+                        class="form-control" required></select>
+            </div>
+            <div class="col-lg-3">
+                <label for="liner">Liner Inventory: </label>
+                <select name="liner" ng-model="liner" ng-options="score for score in liners" class="form-control"
+                        required></select>
+            </div>
+        </div>
+
+            <div class="button1">
+                <button type="submit" class="btn btn-primary" ng-click="addShelter()">
+                    Add
+                    Class
+                </button>
+            </div>
+        </div>
+
 
     </form>

@@ -1,0 +1,269 @@
+    /* Imports Bootstrap functions and Font Awesome functions */
+    @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+    /* Imports Google Fonts: Raleway and Lato */
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,300');
+    @import url('https://fonts.googleapis.com/css?family=Lato:400,300italic,300');
+
+    html, body {
+        height: 100%;
+    }
+
+    /* Header */
+    #head {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 3.5em;
+        width: 50%;
+    }
+
+    #welcome {
+        font-size: 15pt;
+        font-weight: bold;
+    }
+
+    #searchForm {
+        float: right;
+        padding: 3em;
+    }
+
+    #partialHead {
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
+        color: #26033A;
+    }
+
+    /* Navigation */
+    nav {
+        background-color: #004C70;
+        font-size: 20px;
+        font-family: font-family: "Lucida Console", Monaco, monospace;
+        font-variant: small-caps;
+        padding-top: 0.5em;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        z-index: 99999;
+
+    }
+    ul {
+        text-align: left;
+        list-style: none;
+    }
+
+    li {
+        color: white;
+        display: inline;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    li:hover {
+        cursor: pointer;
+        color: #F2635F;
+    }
+
+
+   
+
+   
+    #homeHR {
+        width: 70%;
+    }
+
+    #previewContainer {
+        padding: 0 7em;
+        text-align: center;
+    }
+    
+
+
+
+
+ 
+   
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+  
+
+   
+
+
+    /*Sign Up Page*/
+    #signUpForm {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .form-group {
+        max-width: 80%;
+        margin: 25px auto;
+    }
+
+    
+    
+    #formContact, .alert-success {
+        margin-left: auto;
+        margin-right: auto;
+        width: 62%;
+    }
+
+    .alert-success {
+        margin-top: 2em;
+        width: 50%;
+    }
+
+   
+
+
+    .dropdown-menu li {
+        padding: 0px;
+        margin: 0px;
+    }
+
+
+
+    #searchForm {
+        width: 100%;
+        text-align: center;
+    }
+
+    #searchForm input {
+        margin: 0 20px;
+    }
+
+    #searchContainer {
+      padding: 7em;
+    }
+
+    .inputSearch {
+      padding: 4px;
+      border: solid 3px #c9c9c9;
+      border-radius: 10px;
+      transition: border 0.3s;
+      }
+      .inputSearch:focus {
+       border: solid 3px #969696;
+      }
+
+
+    #iconContainer {
+        overflow: scroll;
+        height: 225px;
+    }
+
+    #iconContainer-webkit-scrollbar { width: 0 !important }
+
+    .iconDiv {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background-color: #06037b;
+        margin: 15px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px;
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    i {
+        color: white;
+    }
+
+    .glyphicon{
+        font-size: 1.5em;
+        color: #aa863a;
+    }
+
+    .iconDiv:hover i {
+        color: #1bd2ed;
+    }
+
+    .active {
+        background-color:#1bd2ed;
+    }
+
+
+
+    #userButton {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    h3{
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    #homePage {
+       /* background: url('../img/background.jpeg'); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .tab{
+        margin-left: 40px;
+        font-size: 18px;
+    }
+   
+    .time {
+        float: right;
+        margin-right: 10px;
+    }
+
+
+    #changePassForm {
+        height: 400px;
+        text-align: center;
+    }
+
+    #changePassForm input[type=text] {
+        margin: 20px auto;
+        display: inline-block;
+    }
+
+    .details {
+        margin-top: 1em;
+        padding-right: 1em;
+    }
+
+
+    #resetPassword{
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 250px;
+    }
+    #resetPasswordBox{
+        width: 100%;
+    }
+    #reset {
+    text-align:center;
+    }
+
+    /*search */
+    .edit{
+        color: black;
+        font-size: 16px;
+        position: absolute;
+        right: 5px;
+        bottom: -100px;
+    }
+
+    .searchIcon{
+
+        color: black;
+    }
+
+    #search{
+        width: 50%;
+    }
+
+

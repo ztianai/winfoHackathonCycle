@@ -1,0 +1,45 @@
+    <form name="signinForm" novalidate id="signUpForm">
+
+        <h2>Sign In</h2>
+
+        <div class="form-group">
+            <label for="handle">Handle:</label>
+            <input type="text" id="handle" name="handle" class="form-control" ng-model="newUser.handle" required>
+
+            <p ng-show="signinForm.handle.$invalid && signinForm.handle.$touched" class="help-block enterHandle">
+                Handle is required when you sign up
+            </p>
+
+        </div>
+
+
+        <!-- Bind model "email" to this input and make the help-block show up if bad format -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" ng-model="newUser.email" required>
+            <!-- Show an error message if the email is not valid -->
+            <p class="help-block" ng-if="signinForm.email.$invalid && signinForm.email.$touched">Not an email!</p>
+        </div>
+
+
+        <!-- Bind model "password" to this input -->
+        <div class="form-group">
+            <label for="pw">Password:</label>
+            <input id="pw" name="password" type="password" class="form-control" required ng-model="newUser.password">
+        </div>
+
+        <button type="submit" class="btn btn-primary" ng-click="signUp()"
+                ng-disabled="signinForm.$invalid">Sign-up
+        </button>
+
+
+        <button type="submit" class="btn btn-primary" ng-click="signIn()"
+                ng-disabled="signinForm.email.$invalid || signinForm.password.$invalid">Sign-in
+        </button>
+        <br>
+        <a ng-click="resetPassword()">Forgot your password?</a>
+
+        <p>{{errorMessage}}</p>
+    </form>
+
+

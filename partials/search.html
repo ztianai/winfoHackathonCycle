@@ -1,0 +1,33 @@
+    <div id="partialHead">
+        <h1 class="search">Search</h1>
+
+        <form id="searchForm">
+            <div class="wrap">
+                <input class="inputSearch" type="search" name="classSearch" placeholder="Search classes..."
+                       ng-model="classSearch" ng-change="filterResults()">
+            </div>
+            <div class="wrap">
+                <input class="inputSearch" type="search" name="schoolSearch" placeholder="Search schools..."
+                       ng-model="schoolSearch" ng-change="filterResults()">
+            </div>
+        </form>
+    </div>
+
+    <div id="searchContainer">
+
+        <div class="homePreview"
+             ng-repeat="obj in classList| orderBy: '-timestamp' | filter: schoolSearch | filter: classSearch">
+
+
+            <i class="{{obj.icon}}"></i>
+            <a ui-sref="review({school:obj.institution.INSTNM, name:obj.name, id:obj.$id})"><b>{{obj.name}}</b>
+
+                <p id="SchoolName">{{obj.institution.INSTNM}}</p></a>
+        </div>
+    </div>
+
+
+
+
+
+

@@ -21,10 +21,20 @@ angular.module('cycle', ['ui.router', 'firebase', 'ngAnimate', 'ui.bootstrap', '
             templateUrl: "partials/addclass.html",
             controller: 'addclassCtrl'
         })
+        .state('shelter', {
+            url: "/shelter",
+            templateUrl: "partials/shelter.html",
+            controller: 'shelterCtrl'
+        })
         
     $urlRouterProvider.otherwise("/");
 
 })
+
+.controller('shelterCtrl', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
+    var ref = new Firebase("https://winfohackathon.firebaseio.com/shelters/"); 
+    $scope.shelterList = $firebaseArray(ref);
+}])
 
 //This is the overall controller for our website.  It primarly handles authentication across 
 //every page on the website 

@@ -1,0 +1,38 @@
+[
+	{
+		"name":"Hope Place, Women and Children's Shelter",
+		"address":"3802 South Othello Street",
+		"zip": "98118",
+		"number":"206.628.2008",
+		"pads":"high",
+		"tampons":"low",
+		"cup":"medium",
+		"liners":"high",
+		"lat":47.5373054,
+		"lng":-122.2840283
+	},
+		{
+		"name":"Angeline's Center for Women",
+		"address":"2030 3rd Ave",
+		"zip":"98101",
+		"number":"206.441.3210",
+		"pads":"low",
+		"tampons":"low",
+		"cup":"low",
+		"liners":"low",
+		"lat":47.6132035,
+		"lng":-122.3417711
+	},
+		{
+		"name":"Sacred Heart Shelter",
+		"address":"318 Second Ave",
+		"zip":"98109",
+		"number":"206.285.7489",
+		"pads":"high",
+		"tampons":"high",
+		"cup":"medium",
+		"liners":"medium",
+		"lat":47.6185834,
+		"lng":-122.3528387
+	}
+]

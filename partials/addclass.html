@@ -12,18 +12,18 @@
             <input id="shelterName" class="form-control" ng-minlength="3" required ng-model="addShelterForm.shelterName">
 
 
-            <label for="shelterDescr">Shelter Description:</label>
+            <label for="shelterDescr">Shelter Amenities:</label>
             <input id="shelterDescr" class="form-control" required ng-model="addShelterForm.desc" name="shelterDescr"
-                   ng-minlength="50">
+                   ng-minlength="10">
 
-            <p class="help-block" ng-show="addShelterForm.shelterDescr.$error.minlength">Minimum length of 50 characters!</p>
+            <p class="help-block" ng-show="addShelterForm.shelterDescr.$error.minlength">Minimum length of 10 characters!</p>
             
 
             <label for="shelterAddress">Shelter Address:</label>
             <input id="shelterAddress" class="form-control" required ng-model="addShelterForm.address" name="shelterAddress"
-                   ng-minlength="50">
+                   ng-minlength="10">
 
-            <p class="help-block" ng-show="addShelterForm.shelterAddress.$error.minlength">Minimum length of 50 characters!</p>
+            <p class="help-block" ng-show="addShelterForm.shelterAddress.$error.minlength">Minimum length of 10 characters!</p>
 
 
 
@@ -62,7 +62,7 @@
             <div class="button1">
                 <button type="submit" class="btn btn-primary" ng-click="addShelter()">
                     Add
-                    Class
+                    Shelter
                 </button>
             </div>
         </div>

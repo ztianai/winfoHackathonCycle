@@ -35,10 +35,10 @@
 				<header  ng-controller="authCtrl" >
 					<nav class="navBar">
 						<ul>
-							<li class="pull-left" ui-sref="home">home</li>
+							<li class="pull-left"><a href="cycle.html">home</a></li>
 							<li class="pull-left" ui-sref="search">search</li>
 							<li class="pull-left" ui-sref="shelter">shelter</li>
-							<li ui-sref="addClass" ng-show="userVerified">add class</li>
+							<li ui-sref="addClass" ng-show="userVerified">add shelter</li>
 
 							<li class="pull-right" id="navAuth" ng-show="!userVerified" ng-click="authInit()">login/signup</li>
 						</ul>

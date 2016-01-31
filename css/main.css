@@ -35,9 +35,19 @@
         color: #26033A;
     }
 
+    a{
+        color: white;
+    }
+
+    a:hover{ 
+        cursor: pointer;
+        color: #E6E6E6;
+        text-decoration: none;
+    }
+
     /* Navigation */
     nav {
-        background-color: #004C70;
+        background-color: #eb6062;
         font-size: 20px;
         font-family: font-family: "Lucida Console", Monaco, monospace;
         font-variant: small-caps;
@@ -62,7 +72,7 @@
 
     li:hover {
         cursor: pointer;
-        color: #F2635F;
+        color: #E6E6E6;
     }
 
 
@@ -79,7 +89,21 @@
     }
     
 
+    #shelter{
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        background-color: #F7819F;
+        font-size: 16px;
 
+    }
+
+    #shelterName{
+
+        padding-top: 10px;
+
+    }
 
 
  

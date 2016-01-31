@@ -8,7 +8,9 @@
 </div> -->
 
 
-<div ng-repeat="obj in shelterList">
-	<p>{{obj.name}}</p>
-	<p>{{obj.address}}</p>
+<div id="shelter" class="col-lg-3" ng-repeat="obj in shelterList">
+	<p id="shelterName"><b>{{obj.name}}</b></p>
+	<hr>
+	<p>Address: {{obj.address}}, {{obj.zip}}</p>
+	<p>Amenities: {{obj.desc}}</p>
 </div>

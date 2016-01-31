@@ -237,6 +237,11 @@
         background-size: cover;
     }
 
+    #container{
+
+        height: 600px;
+    }
+
     #homePic{
         padding-top: 10px;
         padding-left: 300px;

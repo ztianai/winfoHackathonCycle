@@ -29,7 +29,6 @@ var getData = function() {
 		url:'data/shelters.json',
 		type: 'get',
 		success: function(data) {
-			alert("Success");
 			customBuild(data);
 		},
 		dataType: 'json'

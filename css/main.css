@@ -221,6 +221,10 @@
         right: 10px;
         top: 10px;
     }
+    .button1{
+        margin-top: 30px;
+        margin-left: 100px;
+    }
     h3{
         font-style: italic;
         font-size: 20px;
@@ -231,6 +235,12 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    #homePic{
+        padding-top: 10px;
+        padding-left: 300px;
+
     }
 
     .tab{

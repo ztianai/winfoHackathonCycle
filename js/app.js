@@ -26,11 +26,6 @@ angular.module('cycle', ['ui.router', 'firebase', 'ngAnimate', 'ui.bootstrap', '
             templateUrl: "partials/shelter.html",
             controller: 'shelterCtrl'
         })
-        .state('map', {
-            url: "/map",
-            templateUrl: "partials/map.html",
-            controller: 'mapCtrl'
-        })
         
     $urlRouterProvider.otherwise("/");
 
@@ -301,10 +296,10 @@ angular.module('cycle', ['ui.router', 'firebase', 'ngAnimate', 'ui.bootstrap', '
     var ref = new Firebase("https://winfohackathon.firebaseio.com/classes/");
     $scope.classList = $firebaseArray(ref);
 }])
-.controller('mapCtrl', ['$scope', '$firebaseArray', function($scope, $firebaseArray) {
-    var ref = new Firebase("https://winfohackathon.firebaseio.com/classes/");
-    $scope.classList = $firebaseArray(ref);
-}])
+
+
+
+
 
 
 
